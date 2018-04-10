@@ -1,7 +1,7 @@
-# Shopify Liquid Template Snippets for VS Code
+# Rock RMS Lava Template Snippets for VS Code
 This extension for Visual Studio Code adds snippets for Shopify Liquid Template.
 
-Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets](https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets)
+Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets](https://marketplace.visualstudio.com/items?itemName=garrettjohnson.vscode-lava-snippets)
 
 ## Preview
 ![Showcase](./images/showcase.gif)
@@ -15,7 +15,7 @@ Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?item
 ## Installation
 1. Launch Code
 2. From the command palette `Ctrl`-`Shift`-`P` (Windows, Linux) or `Cmd`-`Shift`-`P` (OSX)
-3. Type `ext install vscode-liquid-snippets`
+3. Type `ext install vscode-lava-snippets`
 4. Reload Visual Studio Code
 
 ## Usage
@@ -167,15 +167,8 @@ img_url
 ```
 
 ## Release
-
-### 1.1.0
-- Add whitespaced comment tag
-
-### 1.0.1
-- Add keep both tag for whitespace and non-whitespace control
-
 ### 1.0.0
-- Add whitespace control
+- Initial Release
 
 ## License
 MIT

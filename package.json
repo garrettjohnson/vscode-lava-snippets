@@ -1,10 +1,10 @@
 {
-    "name": "vscode-liquid-snippets",
-    "version": "1.1.0",
-    "publisher": "killalau",
-    "displayName": "Shopify Liquid Template Snippets",
-    "description": "Shopify Liquid Template snippets",
-    "icon": "images/shopify-icon.png",
+    "name": "vscode-lava-snippets",
+    "version": "1.0.0",
+    "publisher": "garrettjohnson",
+    "displayName": "Rock RMS Lava Template Snippets",
+    "description": "Rock RMS Lava Template snippets",
+    "icon": "images/rockrms-icon.jpg",
     "galleryBanner": {
         "color": "#30373b",
         "theme": "dark"
@@ -17,22 +17,38 @@
     ],
     "keywords": [
         "snippets",
-        "liquid",
-        "shopify"
+        "lava",
+        "rockrms"
     ],
     "license": "SEE LICENSE IN LICENSE.txt",
-    "homepage": "https://github.com/killalau/vscode-liquid-snippets",
+    "homepage": "https://github.com/garrettjohnson/vscode-lava-snippets",
     "repository": {
         "type": "git",
-        "url": "https://github.com/killalau/vscode-liquid-snippets.git"
+        "url": "https://github.com/garrettjohnson/vscode-lava-snippets.git"
     },
-    "bugs": "https://github.com/killalau/vscode-liquid-snippets/issues",
+    "bugs": "https://github.com/garrettjohnson/vscode-lava-snippets/issues",
     "contributes": {
         "snippets": [
             {
                 "language": "liquid",
-                "path": "./snippets/liquid.json"
-            }
+                "path": "./snippets/lava.json"
+            },
+            {
+                "language": "liquid",
+                "path": "./snippets/lava-numeric.json"
+            },
+            {
+                "language": "liquid",
+                "path": "./snippets/lava-other.json"
+            },
+            {
+                "language": "liquid",
+                "path": "./snippets/lava-person.json"
+            },
+            {
+                "language": "liquid",
+                "path": "./snippets/lava-text.json"
+            },
         ]
     },
     "extensionDependencies": [

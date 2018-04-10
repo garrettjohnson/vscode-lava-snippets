@@ -1,0 +1,67 @@
+{
+  "Filter abs": {
+    "prefix": "abs",
+    "description": "Numeric filter: abs",
+    "body": "| abs"
+  },
+  "Filter ceiling": {
+    "prefix": "ceiling",
+    "description": "Numeric filter: Ceiling",
+    "body": "| Ceiling"
+  },
+  "Filter divided by": {
+    "prefix": "dividedby",
+    "description": "Numeric filter: divided by",
+    "body": "| DividedBy: ${1:2}"
+  },
+  "Filter floor": {
+    "prefix": "floor",
+    "description": "Numeric filter: floor",
+    "body": "| Floor"
+  },
+  "Filter format": {
+    "prefix": "format",
+    "description": "Numeric filter: Format",
+    "body": "| Format:'${1:#,##0.00}'"
+  },
+  "Filter format as currency": {
+    "prefix": "formatascurrency",
+    "description": "Numeric filter: formatascurrency",
+    "body": "| FormatAsCurrency"
+  },
+  "Filter minus": {
+    "prefix": "minus",
+    "description": "Numeric filter: minus",
+    "body": "| Minus:${1:1}"
+  },
+  "Filter modulo": {
+    "prefix": "modulo",
+    "description": "Numeric filter: modulo",
+    "body": "| modulo:${1:2}"
+  },
+  "Filter money": {
+    "prefix": "money",
+    "description": "Numeric filter: money",
+    "body": "| FormatAsCurrency"
+  },
+  "Filter plus": {
+    "prefix": "plus",
+    "description": "Numeric filter: plus",
+    "body": "| Plus:${1:1}"
+  },
+  "Filter times": {
+    "prefix": "times",
+    "description": "Numeric filter: times",
+    "body": "| Times: ${1:1}"
+  },
+  "Filter to quantity": {
+    "prefix": "toquantity",
+    "description": "Numeric filter: ToQuantity",
+    "body": "| ToQuantity:${1:integer}"
+  },
+  "Filter to string": {
+    "prefix": "tostring",
+    "description": "Numeric filter: ToString",
+    "body": "| ToString"
+  }
+}

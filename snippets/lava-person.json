@@ -1,0 +1,133 @@
+{
+  "Filter address": {
+    "prefix": "address",
+    "description": "Person filter: Address",
+    "body": "| Address:'${1:type}','${2:[[city]], [[state]]}'"
+  },
+  "Filter campus": {
+    "prefix": "campus",
+    "description": "Person filter: Campus",
+    "body": "| Campus"
+  },
+  "Filter children": {
+    "prefix": "children",
+    "description": "Person filter: Children",
+    "body": "| Children"
+  },
+  "Filter FamilySalutation": {
+    "prefix": "FamilySalutation",
+    "description":
+      "Person filter: Family Salutation (includeKids, includeInactive,useFormalName,FinalSelerator,Separator)",
+    "body":
+      "| FamilySalutation:'${1:|true,false|}','${2:|true,false|}','${3:|true,false|}','${4:and}','${5:,}'"
+  },
+  "Filter GeofencingGroupMembers": {
+    "prefix": "GeofencingGroupMembers",
+    "description": "Person filter: GeofencingGroupMembers",
+    "body": "| GeofencingGroupMembers:'${1:GroupTypeId}','${1:GroupRoleId}'"
+  },
+  "Filter GeofencingGroups": {
+    "prefix": "GeofencingGroups",
+    "description": "Person filter: GeofencingGroups",
+    "body": "| GeofencingGroups:'${1:GroupTypeId}'"
+  },
+  "Filter GetUserPreference": {
+    "prefix": "GetUserPreference",
+    "description": "Person filter: GetUserPreference",
+    "body": "| GetUserPreference:'${1:Key}'"
+  },
+  "Filter Group": {
+    "prefix": "Group",
+    "description": "Person filter: Group",
+    "body": "| Group:'${1:GroupId}','${2:|All,Active,Inactive,Pending|}'"
+  },
+  "Filter Groups": {
+    "prefix": "Groups",
+    "description": "Person filter: Groups",
+    "body": "| Group:'${1:GroupTypeId}','${2:|All,Active,Inactive,Pending|}'"
+  },
+  "Filter Groups Attended": {
+    "prefix": "GroupsAttended",
+    "description": "Person filter: Groups",
+    "body": "| GroupsAttended:'${1:GroupTypeId}'"
+  },
+  "Filter HasSigned": {
+    "prefix": "HasSigned",
+    "description": "Person filter: Groups",
+    "body": "| HasSignedDocument:${1:DocumentId},'${2:ifTrue}','${3:ifFalse}'"
+  },
+  "Filter HasSigned If": {
+    "prefix": "HasSignedIf",
+    "description": "Person filter: Groups",
+    "body": [
+      "{%- assign hasSigned = ${1:CurrentPerson} | HasSignedDocument:${2:DocumentId} -%}",
+      "{%- if hasSigned -%}",
+      "\t{{ ${1}.NickName }} has signed this document.",
+      "{%- endif -%}"
+    ]
+  },
+  "Filter Head of Household": {
+    "prefix": "HeadOfHousehold",
+    "description": "Person filter: HeadOfHousehold",
+    "body": "| HeadOfHousehold"
+  },
+  "Filter LastAttendedGroupOfType": {
+    "prefix": "LastAttendedGroupOfType",
+    "description": "Person filter: LastAttendedGroupOfType",
+    "body": "| LastAttendedGroupOfType:'${1:GroupTypeId}'"
+  },
+  "Filter NearestGroup": {
+    "prefix": "NearestGroup",
+    "description": "Person filter: NearestGroup",
+    "body": "| NearestGroup:'${1:GroupTypeId}'"
+  },
+  "Filter Parents": {
+    "prefix": "Parents",
+    "description": "Person filter: Parents",
+    "body": "| Parents"
+  },
+  "Filter PersonByAliasId": {
+    "prefix": "PersonByAliasId",
+    "description": "Person filter: PersonByAliasId",
+    "body": "| PersonByAliasId"
+  },
+  "Filter PersonByGuid": {
+    "prefix": "PersonByGuid",
+    "description": "Person filter: PersonByGuid",
+    "body": "| PersonByGuid"
+  },
+  "Filter PersonById": {
+    "prefix": "PersonById",
+    "description": "Person filter: PersonById",
+    "body": "| PersonById"
+  },
+  "Filter PersonTokenCreate": {
+    "prefix": "PersonTokenCreate",
+    "description": "Person filter: PersonTokenCreate",
+    "body":
+      "| PersonTokenCreate:${1:expireMinutesIntornull},${2:usageLimitIntornull},${3:pageIdIntornull}"
+  },
+  "Filter PersonTokenRead": {
+    "prefix": "PersonTokenRead",
+    "description": "Person filter: PersonTokenRead",
+    "body": [
+      "{%- assign token = 'Global' | PageParameter:'${1:rckipid}' -%}",
+      "{%- assign person = token | PersonTokenRead:${2:false},${3:optionalPageId} -%}"
+    ]
+  },
+  "Filter PhoneNumber": {
+    "prefix": "PhoneNumber",
+    "description": "Person filter: PhoneNumber",
+    "body": "| PhoneNumber:'${1:|Home,Mobile,Work,Other|}'"
+  },
+  "Filter SetUserPreference": {
+    "prefix": "SetUserPreference",
+    "description": "Person filter: SetUserPreference",
+    "body": "| SetUserPreference:'${1:settingKey}','${2:settingValue}'"
+  },
+  "Filter Spouse": {
+    "prefix": "Spouse",
+    "description": "Person filter: Spouse",
+    "body": "| Spouse"
+  }
+}

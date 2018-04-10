@@ -1,0 +1,156 @@
+{
+  "Filter AddLinkTagToHead": {
+    "prefix": "AddLinkTagToHead",
+    "description": "Other filter: AddLinkTagToHead",
+    "body": "| AddLinkTagToHead:'${1:tag}','${2:Value}'"
+  },
+  "Filter AddMetaTagToHead": {
+    "prefix": "AddMetaTagToHead",
+    "description": "Other filter: AddMetaTagToHead",
+    "body": "| AddMetaTagToHead:'${1:tag}','${2:Value}'"
+  },
+  "Filter AddCssLink": {
+    "prefix": "AddCssLink",
+    "description": "Other filter: AddCssLink",
+    "body": "| AddCssLink"
+  },
+  "Filter AddScriptLink": {
+    "prefix": "AddScriptLink",
+    "description": "Other filter: AddScriptLink",
+    "body": "| AddScriptLink"
+  },
+  "Filter AsBoolean": {
+    "prefix": "AsBoolean",
+    "description": "Other filter: AsBoolean",
+    "body": "| AsBoolean"
+  },
+  "Filter AsInteger": {
+    "prefix": "AsInteger",
+    "description": "Other filter: AsInteger",
+    "body": "| AsInteger"
+  },
+  "Filter AsDecimal": {
+    "prefix": "AsDecimal",
+    "description": "Other filter: AsDecimal",
+    "body": "| AsDecimal"
+  },
+  "Filter AsDouble": {
+    "prefix": "AsDouble",
+    "description": "Other filter: AsDouble",
+    "body": "| AsDouble"
+  },
+  "Filter AsString": {
+    "prefix": "AsString",
+    "description": "Other filter: AsString",
+    "body": "| AsString"
+  },
+  "Filter AsDateTime": {
+    "prefix": "AsDateTime",
+    "description": "Other filter: AsDateTime",
+    "body": "| AsDateTime"
+  },
+  "Filter Base64Encode": {
+    "prefix": "Base64Encode",
+    "description": "Other filter: Base64Encode",
+    "body": "| Base64Encode"
+  },
+  "Filter CreateShortlink": {
+    "prefix": "CreateShortlink",
+    "description": "Other filter: CreateShortlink",
+    "body":
+      "| CreateShortlink:'${1:}',${2:siteId},${3:'OverwriteT/F'},${4:lengthInt}"
+  },
+  "Filter Lava Debug": {
+    "prefix": "debug",
+    "description": "Other filter: Debug (Lava w/ User)",
+    "body": "{{ ${1:'Lava'} | Debug:'${2:username}' }}"
+  },
+  "Filter FromCache": {
+    "prefix": "FromCache",
+    "description": "Other filter: FromCache",
+    "body":
+      "| FromCache:'${1|DefinedValue,DefinedType,Campus,Category,GroupType,Page,Block,BlockType,EventCalendar,Attribute,NoteType,ContentChannel|}'"
+  },
+  "Filter FromJSON": {
+    "prefix": "FromJSON",
+    "description": "Other filter: FromJSON",
+    "body": "| FromJSON"
+  },
+  "Filter GroupById": {
+    "prefix": "GroupById",
+    "description": "Other filter: GroupById",
+    "body": "| GroupById"
+  },
+  "Filter GroupByGuid": {
+    "prefix": "GroupByGuid",
+    "description": "Other filter: GroupByGuid",
+    "body": "| GroupByGuid"
+  },
+  "Filter Has Rights to": {
+    "prefix": "HasRightsTo",
+    "description": "Other filter: Has Rights To (Model)",
+    "body": "| HasRightsTo:'${1:View}'"
+  },
+  "Filter Has Rights to Id": {
+    "prefix": "HasRightsToId",
+    "description": "Other filter: Has Rights To Id",
+    "body": "| HasRightsTo:'${1:View}','${1:Rock.Model.Group}'"
+  },
+  "FilterNotes": {
+    "prefix": "notes",
+    "description": "Other filter: Notes",
+    "body": "| Notes:'${1:noteTypeIds}','${2|desc,asc|}',${3:limit}"
+  },
+  "Filter Set Page Title": {
+    "prefix": "SetPageTitle",
+    "description": "Other filter: SetPageTitle",
+    "body": "| SetPageTitle"
+  },
+  "Filter PropertyToKeyValue": {
+    "prefix": "PropertyToKeyValue",
+    "description": "Other filter: PropertyToKeyValue",
+    "body": "| PropertyToKeyValue"
+  },
+  "Filter Page": {
+    "prefix": "Page",
+    "description": "Other filter: WithFallback",
+    "body":
+      "| Page:'${1|Title,Description,Url,Id,Host,Path,SiteName,SiteId,Theme,Layout,Scheme,QueryString|}'"
+  },
+  "Filter Page Parameter": {
+    "prefix": "PageParameter",
+    "description": "Other filter: PageParameter",
+    "body": "| PageParameter:'${1:GroupId}'"
+  },
+  "Filter Page Redirect": {
+    "prefix": "PageRedirect",
+    "description": "Other filter: PageRedirect",
+    "body": "| PageRedirect"
+  },
+  "Filter Postback": {
+    "prefix": "postback",
+    "description": "Other filter: Postback",
+    "body": "| Postback:'${1:name}'"
+  },
+  "Filter Property": {
+    "prefix": "Property",
+    "description": "Other filter: Property",
+    "body": "| Property:${1:key}"
+  },
+  "Filter ResolveRockUrl": {
+    "prefix": "ResolveRockUrl",
+    "description": "Other filter: ResolveRockUrl",
+    "body": "| ResolveRockUrl"
+  },
+  "Filter ToJSON": {
+    "prefix": "ToJSON",
+    "description": "Other filter: ToJSON",
+    "body": "| ToJSON"
+  },
+  "Filter Url": {
+    "prefix": "Url",
+    "description": "Other filter: Url",
+    "body":
+      "| Page:'${1|host,port,segments,scheme,protocol,localpath,pathandquery,queryparameter,url|}'"
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "Tag if": {
+    "prefix": "if",
+    "description": "Control flow tag: if",
+    "body": ["{% if ${1:condition} %}", "\t$2", "{% endif %}"]
+  },
+  "Tag else": {
+    "prefix": "else",
+    "description": "Control flow tag: else",
+    "body": ["{% else %}", "\t"]
+  },
+  "Tag elsif": {
+    "prefix": "elseif",
+    "description": "Control flow tag: elseif",
+    "body": ["{% elseif ${1:condition} %}", "\t"]
+  },
+  "Tag if else": {
+    "prefix": "ifelse",
+    "description": "Control flow tag: if else",
+    "body": [
+      "{% if ${1:condition} %}",
+      "\t$2",
+      "{% else %}",
+      "\t$3",
+      "{% endif %}"
+    ]
+  },
+  "Tag unless": {
+    "prefix": "unless",
+    "description": "Control flow tag: unless",
+    "body": ["{% unless ${1:condition} %}", "\t$2", "{% endunless %}"]
+  },
+  "Tag case": {
+    "prefix": "case",
+    "description": "Control flow tag: case",
+    "body": [
+      "{% case ${1:variable} %}",
+      "\t{% when ${2:condition} %}",
+      "\t\t$3",
+      "\t{% else %}",
+      "\t\t$4",
+      "{% endcase %}"
+    ]
+  },
+  "Tag when": {
+    "prefix": "when",
+    "description": "Control flow tag: when",
+    "body": ["{% when ${1:condition} %}", "$0"]
+  },
+  "Tag cycle": {
+    "prefix": "cycle",
+    "description": "Iteration tag: cycle",
+    "body": ["{% cycle '${1:odd}', '${2:even}' %}"]
+  },
+  "Tag cycle group": {
+    "prefix": "cyclegroup",
+    "description": "Iteration tag: cycle group",
+    "body": ["{% cycle '${1:group name}': '${2:odd}', '${3:even}' %}"]
+  },
+  "Tag for": {
+    "prefix": "for",
+    "description": "Iteration tag: for",
+    "body": ["{% for ${1:item} in ${2:collection} %}", "\t$3", "{% endfor %}"]
+  },
+  "Tag Option limit": {
+    "prefix": "limit",
+    "description": "For loops option",
+    "body": ["limit:${1:5}"]
+  },
+  "Tag Option offset": {
+    "prefix": "offset",
+    "description": "For loops option",
+    "body": ["offset:${1:0}"]
+  },
+  "Tag Option reversed": {
+    "prefix": "reversed",
+    "description": "For loops option",
+    "body": ["reversed"]
+  },
+  "Tag break": {
+    "prefix": "break",
+    "description": "Iteration tag: break",
+    "body": ["{% break %}"]
+  },
+  "Tag continue": {
+    "prefix": "continue",
+    "description": "Iteration tag: continue",
+    "body": ["{% continue %}"]
+  },
+  "Tag assign": {
+    "prefix": "assign",
+    "description": "Variable tag: assign",
+    "body": ["{% assign ${1:variable} = ${2:value} %}"]
+  },
+  "Tag increment": {
+    "prefix": "increment",
+    "description": "Variable tag: increment",
+    "body": ["{% increment ${1:variable} %}"]
+  },
+  "Tag decrement": {
+    "prefix": "decrement",
+    "description": "Variable tag: decrement",
+    "body": ["{% decrement ${1:variable} %}"]
+  },
+  "Tag capture": {
+    "prefix": "capture",
+    "description": "Variable tag: capture",
+    "body": ["{% capture ${1:variable} %}$2{% endcapture %}"]
+  },
+  "Tag include": {
+    "prefix": "include",
+    "description": "Theme tag: include",
+    "body": ["{% include '${1:snippet}' %}"]
+  },
+  "Tag include with parameters": {
+    "prefix": "includewith",
+    "description": "Theme tag: include with parameters",
+    "body": ["{% include '${1:snippet}', ${2:variable}: ${3:value} %}"]
+  },
+  "Tag execute": {
+    "prefix": "execute",
+    "description": "Command tag: execute",
+    "body": ["{%- execute -%}", "\t$3", "{%- endexecute -%}"]
+  },
+  "Tag javascript": {
+    "prefix": "javascript",
+    "description": "Command tag: javascript",
+    "body": ["{%- javascript -%}", "\t$3", "{%- endjavascript -%}"]
+  },
+  "Tag Option references": {
+    "prefix": "references",
+    "description": "Tag javascript option",
+    "body": ["references: ${1:0}"]
+  },
+  "Tag Option disableanonymousfunction": {
+    "prefix": "disableanonymousfunction",
+    "description": "Tag javascript option",
+    "body": ["disableanonymousfunction:true"]
+  },
+  "Tag Option url": {
+    "prefix": "url",
+    "description": "Tag javascript option",
+    "body": ["url:'${1:https://...}'"]
+  },
+  "Tag sql": {
+    "prefix": "sql",
+    "description": "Theme tag: SQL",
+    "body": ["{%- sql return:'${1:listvariable}' -%}", "\t$3", "{%- endsql -%}"]
+  },
+  "Tag stylesheet": {
+    "prefix": "stylesheet",
+    "description": "Theme tag: stylesheet",
+    "body": ["{%- stylesheet -%}", "\t$3", "{%- endstylesheet -%}"]
+  },
+  "Tag Option id": {
+    "prefix": "id",
+    "description": "Tag stylesheet option",
+    "body": ["id:'${1:0}'"]
+  },
+  "Tag Option compile": {
+    "prefix": "compile",
+    "description": "Tag stylesheet option",
+    "body": ["compile:'${1:less}'"]
+  },
+  "Tag Option import": {
+    "prefix": "import",
+    "description": "Tag stylesheet option",
+    "body": ["import:'${1:_variables.less}'"]
+  },
+  "Tag Option cacheduration": {
+    "prefix": "cacheduration",
+    "description": "Tag stylesheet option",
+    "body": ["cacheduration:'${1:3600}'"]
+  },
+  "Tag webrequest": {
+    "prefix": "webrequest",
+    "description": "Command tag: webrequest",
+    "body": [
+      "{%- webrequest url:'${1:https://api.github.com/repos/SparkDevNetwork/Rock/commits}' -%}",
+      "\t$3",
+      "{%- endwebrequest -%}"
+    ]
+  },
+  "Tag workflowactivate": {
+    "prefix": "workflowactivate",
+    "description": "Command tag: Workflow Activate",
+    "body": [
+      "{% workflowactivate workflowtype:'${1:workflowId}' %}",
+      "\tActivated new workflow with the id of #{{ Workflow.Id }}.$2",
+      "{% endworkflowactivate %}"
+    ]
+  },
+  "Tag raw": {
+    "prefix": "raw",
+    "description": "Theme tag: raw",
+    "body": ["{% raw %}$1{% endraw %}"]
+  },
+  "Tag comment, whitespaced": {
+    "prefix": "comment-",
+    "description": "Comment tag: comment, whitespaced",
+    "body": ["{%- comment -%}$1{%- endcomment -%}"]
+  },
+  "Tag if, whitespaced": {
+    "prefix": "if-",
+    "description": "Control flow tag: if, whitespaced",
+    "body": ["{%- if ${1:condition} -%}", "\t$2", "{%- endif -%}"]
+  },
+  "Tag else, whitespaced": {
+    "prefix": "else-",
+    "description": "Control flow tag: else, whitespaced",
+    "body": ["{%- else -%}", "\t"]
+  },
+  "Tag elsif, whitespaced": {
+    "prefix": "elseif-",
+    "description": "Control flow tag: elsif, whitespaced",
+    "body": ["{%- elseif ${1:condition} -%}", "\t"]
+  },
+  "Tag if else, whitespaced": {
+    "prefix": "ifelse-",
+    "description": "Control flow tag: if else, whitespaced",
+    "body": [
+      "{%- if ${1:condition} -%}",
+      "\t$2",
+      "{%- else -%}",
+      "\t$3",
+      "{%- endif -%}"
+    ]
+  },
+  "Tag unless, whitespaced": {
+    "prefix": "unless-",
+    "description": "Control flow tag: unless, whitespaced",
+    "body": ["{%- unless ${1:condition} -%}", "\t$2", "{%- endunless -%}"]
+  },
+  "Tag case, whitespaced": {
+    "prefix": "case-",
+    "description": "Control flow tag: case, whitespaced",
+    "body": [
+      "{%- case ${1:variable} -%}",
+      "\t{%- when ${2:condition} -%}",
+      "\t\t$3",
+      "\t{%- else -%}",
+      "\t\t$4",
+      "{%- endcase -%}"
+    ]
+  },
+  "Tag when, whitespaced": {
+    "prefix": "when-",
+    "description": "Control flow tag: when, whitespaced",
+    "body": ["{%- when ${1:condition} -%}", "$0"]
+  },
+  "Tag cycle, whitespaced": {
+    "prefix": "cycle-",
+    "description": "Iteration tag: cycle, whitespaced",
+    "body": ["{%- cycle '${1:odd}', '${2:even}' -%}"]
+  },
+  "Tag cycle group, whitespaced": {
+    "prefix": "cyclegroup-",
+    "description": "Iteration tag: cycle group, whitespaced",
+    "body": ["{%- cycle '${1:group name}': '${2:odd}', '${3:even}' -%}"]
+  },
+  "Tag for, whitespaced": {
+    "prefix": "for-",
+    "description": "Iteration tag: for, whitespaced",
+    "body": [
+      "{%- for ${1:item} in ${2:collection} -%}",
+      "\t$3",
+      "{%- endfor -%}"
+    ]
+  },
+  "Tag continue, whitespaced": {
+    "prefix": "continue-",
+    "description": "Iteration tag: continue, whitespaced",
+    "body": ["{%- continue -%}"]
+  },
+  "Tag assign, whitespaced": {
+    "prefix": "assign-",
+    "description": "Variable tag: assign, whitespaced",
+    "body": ["{%- assign ${1:variable} = ${2:value} -%}"]
+  },
+  "Tag capture, whitespaced": {
+    "prefix": "capture-",
+    "description": "Variable tag: capture, whitespaced",
+    "body": ["{%- capture ${1:variable} -%}$2{%- endcapture -%}"]
+  },
+  "Filter first": {
+    "prefix": "first",
+    "description": "Array filter: first",
+    "body": "| first"
+  },
+  "Filter index": {
+    "prefix": "index",
+    "description": "Array filter: index",
+    "body": "| Index:'${1:0}'"
+  },
+  "Filter join": {
+    "prefix": "join",
+    "description": "Array filter: join",
+    "body": "| Join:'${1:, }'"
+  },
+  "Filter last": {
+    "prefix": "last",
+    "description": "Array filter: last",
+    "body": "| Last"
+  },
+  "Filter map": {
+    "prefix": "map",
+    "description": "Array filter: map",
+    "body": "| Map:'${1:key}'"
+  },
+  "Filter select": {
+    "prefix": "select",
+    "description": "Array filter: select",
+    "body": "| Select:'${1:key}'"
+  },
+  "Filter shuffle": {
+    "prefix": "select",
+    "description": "Array filter: shuffle",
+    "body": "| Shuffle"
+  },
+  "Filter size": {
+    "prefix": "size",
+    "description": "Array filter: size",
+    "body": "| size"
+  },
+  "Filter sort": {
+    "prefix": "sort",
+    "description": "Array filter: sort",
+    "body": "| Sort:'${1:key}'"
+  },
+  "Filter sort by attribute": {
+    "prefix": "sortbyattribute",
+    "description": "Array filter: sort",
+    "body": "| SortByAttribute:'${1:key}'"
+  },
+  "Filter uniq": {
+    "prefix": "uniq",
+    "description": "Array filter: uniq",
+    "body": "| Uniq"
+  },
+  "Filter where": {
+    "prefix": "where",
+    "description": "Array filter: where",
+    "body": "| Where:'${1:key}','${2:value}'"
+  },
+  "Filter reverse": {
+    "prefix": "reverse",
+    "description": "Array filter or Text filter: reverse",
+    "body": "| reverse"
+  }
+}

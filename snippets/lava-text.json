@@ -1,0 +1,207 @@
+{
+  "Filter append": {
+    "prefix": "append",
+    "description": "Text filter: append",
+    "body": "| Append:'${1:string}'"
+  },
+  "Filter capitalize": {
+    "prefix": "capitalize",
+    "description": "Text filter: capitalize",
+    "body": "| Capitalize"
+  },
+  "Filter decrypt": {
+    "prefix": "decrypt",
+    "description": "Text filter: decrypt",
+    "body": "| Decrypt"
+  },
+  "Filter default": {
+    "prefix": "default",
+    "description": "Text filter: append",
+    "body": "| Default:'${1:string}'"
+  },
+  "Filter downcase": {
+    "prefix": "downcase",
+    "description": "Text filter: downcase",
+    "body": "| Downcase"
+  },
+  "Filter escape": {
+    "prefix": "escape",
+    "description": "Text filter: escape",
+    "body": "| Escape"
+  },
+  "Filter escapedatastring": {
+    "prefix": "EscapeDataString",
+    "description": "Text filter: escapedatastring",
+    "body": "| EscapeDataString"
+  },
+  "Filter frommarkdown": {
+    "prefix": "frommarkdown",
+    "description": "Text filter: from markdown",
+    "body": "| FromMarkdown"
+  },
+  "Filter htmldecode": {
+    "prefix": "htmldecode",
+    "description": "Text filter: htmldecode",
+    "body": "| HtmlDecode"
+  },
+  "Filter humanize": {
+    "prefix": "humanize",
+    "description": "Text filter: humanize",
+    "body": "| Humanize"
+  },
+  "Filter linkify": {
+    "prefix": "linkify",
+    "description": "Text filter: linkify",
+    "body": "| linkify"
+  },
+  "Filter newline to br": {
+    "prefix": "newlinetobr",
+    "description": "Text filter: newline to br",
+    "body": "| NewlineToBr"
+  },
+  "Filter ObfuscateEmail": {
+    "prefix": "obfuscateemail",
+    "description": "Text filter: ObfuscateEmail",
+    "body": "| ObfuscateEmail"
+  },
+  "Filter pluralize": {
+    "prefix": "pluralize",
+    "description": "Text filter: pluralize",
+    "body": "| Pluralize"
+  },
+  "Filter pluralizeforquantity": {
+    "prefix": "pluralizeforquantity",
+    "description": "Text filter: pluralize",
+    "body": "{{ '${1:Word}' | PluralizeForQuantity:${2:wordCount} }}"
+  },
+  "Filter possessive": {
+    "prefix": "possessive",
+    "description": "Text filter: possessive",
+    "body": "| Possessive"
+  },
+  "Filter prepend": {
+    "prefix": "prepend",
+    "description": "Text filter: prepend",
+    "body": "| Prepend:'${1:string}'"
+  },
+  "Filter RegExMatch": {
+    "prefix": "regexmatch",
+    "description": "Text filter: RegExMatch",
+    "body": "| RegExMatch:'${1:string}'"
+  },
+  "Filter remove": {
+    "prefix": "remove",
+    "description": "Text filter: remove",
+    "body": "| Remove:'${1:string}'"
+  },
+  "Filter remove first": {
+    "prefix": "removefirst",
+    "description": "Text filter: remove first",
+    "body": "| RemoveFirst:'${1:string}'"
+  },
+  "Filter replace": {
+    "prefix": "replace",
+    "description": "Text filter: replace",
+    "body": "| Replace:'${1:target}','${2:replace}'"
+  },
+  "Filter replace first": {
+    "prefix": "replacefirst",
+    "description": "Text filter: replace first",
+    "body": "| ReplaceFirst:'${1:target}','${2:replace}'"
+  },
+  "Filter replace last": {
+    "prefix": "replacelast",
+    "description": "Text filter: replace last",
+    "body": "| ReplaceLast:'${1:target}','${2:replace}'"
+  },
+  "Filter right": {
+    "prefix": "right",
+    "description": "Text filter: Right",
+    "body": "| Right:${1:Integer}"
+  },
+  "Filter sanitize sql": {
+    "prefix": "sanitizesql",
+    "description": "Text filter: SanitizeSql",
+    "body": "| SanitizeSql"
+  },
+  "Filter sentence case": {
+    "prefix": "sentencecase",
+    "description": "Text filter: SentenceCase",
+    "body": "| SentenceCase"
+  },
+  "Filter singularize": {
+    "prefix": "singularize",
+    "description": "Text filter: Singularize",
+    "body": "| Singularize"
+  },
+  "Filter slice": {
+    "prefix": "slice",
+    "description": "Text filter: Slice",
+    "body": "| Slice:${1:0}, ${2:5}"
+  },
+  "Filter split": {
+    "prefix": "split",
+    "description": "Text filter: Split",
+    "body": "| Split:'${1:,}'"
+  },
+  "Filter strip": {
+    "prefix": "striphtml",
+    "description": "Text filter: StripHtml",
+    "body": "| StripHtml"
+  },
+  "Filter strip newlines": {
+    "prefix": "stripnewlines",
+    "description": "Text filter: stripnewlines",
+    "body": "| StripNewlines"
+  },
+  "Filter title case": {
+    "prefix": "titlecase",
+    "description": "Text filter: title case",
+    "body": "| TitleCase"
+  },
+  "Filter to css class": {
+    "prefix": "tocssclass",
+    "description": "Text filter: to css class",
+    "body": "| ToCssClass"
+  },
+  "Filter to pascal": {
+    "prefix": "to pascal",
+    "description": "Text filter: to pascal",
+    "body": "| ToPascal"
+  },
+  "Filter trim": {
+    "prefix": "trim",
+    "description": "Text filter: trim",
+    "body": "| Trim"
+  },
+  "Filter truncate": {
+    "prefix": "truncate",
+    "description": "Text filter: truncate",
+    "body": "| Truncase: ${1:20}, '${2:...}'"
+  },
+  "Filter truncatewords": {
+    "prefix": "truncatewords",
+    "description": "Text filter: truncatewords",
+    "body": "| TruncateWords:${1:5},'${2:...}'"
+  },
+  "Filter unescape data string": {
+    "prefix": "unescapedatastring",
+    "description": "Text filter: UnescapeDataString",
+    "body": "| UnescapeDataString"
+  },
+  "Filter upcase": {
+    "prefix": "upcase",
+    "description": "Text filter: upcase",
+    "body": "| Upcase"
+  },
+  "Filter url encode": {
+    "prefix": "urlencode",
+    "description": "Text filter: url encode / EscapeDataString",
+    "body": "| EscapeDataString"
+  },
+  "Filter with fallback": {
+    "prefix": "withfallback",
+    "description": "Text filter: WithFallback",
+    "body": "| WithFallback:'${1:Has Value}','${2:Missing Value}'"
+  }
+}
