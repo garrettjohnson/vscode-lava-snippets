@@ -92,16 +92,6 @@
     "description": "Variable tag: assign",
     "body": ["{% assign ${1:variable} = ${2:value} %}"]
   },
-  "Tag increment": {
-    "prefix": "increment",
-    "description": "Variable tag: increment",
-    "body": ["{% increment ${1:variable} %}"]
-  },
-  "Tag decrement": {
-    "prefix": "decrement",
-    "description": "Variable tag: decrement",
-    "body": ["{% decrement ${1:variable} %}"]
-  },
   "Tag capture": {
     "prefix": "capture",
     "description": "Variable tag: capture",

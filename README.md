@@ -1,7 +1,7 @@
 # Rock RMS Lava Template Snippets for VS Code
-This extension for Visual Studio Code adds snippets for Shopify Liquid Template.
+This extension for Visual Studio Code adds snippets for [Rock RMS](https://www.rockrms.com) [Lava Templating engine](https://www.rockrms.com/lava).
 
-Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=killalau.vscode-liquid-snippets](https://marketplace.visualstudio.com/items?itemName=garrettjohnson.vscode-lava-snippets)
+Visual Studio Marketplace link: [https://marketplace.visualstudio.com/items?itemName=garrettjohnson.vscode-lava-snippets](https://marketplace.visualstudio.com/items?itemName=garrettjohnson.vscode-lava-snippets)
 
 ## Preview
 ![Showcase](./images/showcase.gif)
@@ -32,14 +32,14 @@ comment- // whitespace stripped
 ```javascript
 if
 else
-elsif
+elseif
 ifelse
 unless
 case
 when
 if-     // whitespace stripped
 else-   // whitespace stripped
-elsif-  // whitespace stripped
+elseif- // whitespace stripped
 ifelse- // whitespace stripped
 unless- // whitespace stripped
 case-   // whitespace stripped
@@ -56,115 +56,111 @@ offset      // For loops option
 reversed    // For loops option
 break
 continue
-tablerow
 cycle-      // whitespace stripped
 cyclegroup- // whitespace stripped
 for-        // whitespace stripped
 continue-   // whitespace stripped
-tablerow-   // whitespace stripped
 ```
 
 ### Variable Tag
 ```javascript
 assign
-increment
-decrement
 capture
 assign-  // whitespace stripped
 capture- // whitespace stripped
 ```
 
-### Theme Tag
-```javascript
-include
-includewith    // Theme Tag {% include %} with parameters
-section
-raw
-layout
-layoutnone
-paginate
-```
-
 ### Array Filter
 ```javascript
-join
-first
-last
-concat
-map
-reverse
-size
-sort
-uniq
+First
+Index
+Indexer
+Join
+Last
+Map
+Select
+Shuffle
+Size
+Sort
+SortByAttribute
+Uniq
+Where
 ```
 
-### HTML Filter
+### Numeric Filter
 ```javascript
-img_tag
-img_tag_param  // HTML Filter {% img_tag %} with parameters
-script_tag
-stylesheet_tag
+Ceiling
+DividedBy
+Floor
+Format
+FormatAsCurrency
+Minus
+Modulo
+NumberToOrdinal
+NumberToOrdinalWords
+NumberToRomanNumerals
+NumberToWords
+Plus
+Times
+ToQuantity
+ToString
 ```
 
-### Math Filter
+### Text Filter
 ```javascript
-abs
-ceil
-divided_by
-floor
-minus
-plus
-round
-times
-modulo
+Append
+Captialize
+Decrypt
+Default
+Downcase
+Escape
+EscapeDataString
+FromMarkdown
+HtmlDecode
+Humanize
+Linkify
+NewlineToBr
+ObfuscateEmail
+Pluralize
+PluralizeForQuantity
+Possessive
+Prepend
+RegExMatch
+Remove
+RemoveFirst
+Replace
+ReplaceFirst
+ReplaceLast
+Right
+SanitizeSql
+SentenceCase
+Singularize
+Size
+Slice
+Split
+StripHtml
+StripNewlines
+TitleCase
+ToCssClass
+ToPascal
+Trim
+Truncate
+TruncateWords
+UnescapeDataString
+Upcase
+WithFallback
 ```
 
-### Money Filter
+### Other Filter
 ```javascript
-money
-money_with_currency
-money_without_trailing_zeros
-money_without_currency
+*
+```
+### Person Filter
+```javascript
+*
 ```
 
-### String Filter
-```javascript
-append
-camelcase
-captialize
-downcase
-escape
-handleize
-md5
-newline_to_br
-pluralize
-prepend
-remove
-remove_first
-replace
-replace_first
-slice
-slice_single   // String Filter 'slice' with single parameter
-split
-strip
-lstrip
-rstrip
-strip_html
-strip_newlines
-truncate
-truncatewords
-upcase
-url_encode
-url_escape
-url_param_escape
-```
 
-### URL Filter
-```javascript
-asset_url
-asset_img_url
-img_url
-```
 
 ## Release
 ### 1.0.0

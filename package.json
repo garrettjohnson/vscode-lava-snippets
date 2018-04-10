@@ -48,7 +48,7 @@
             {
                 "language": "liquid",
                 "path": "./snippets/lava-text.json"
-            },
+            }
         ]
     },
     "extensionDependencies": [
