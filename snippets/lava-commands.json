@@ -1,0 +1,124 @@
+{
+  "Command cache": {
+    "prefix": "cache",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- cache key:'${1:variable}' duration'${2:3600}' twopass:'${3|false,true|}' ${4:tags:'${5:tag,list,optional}'} -%}",
+      "\t$6",
+      "{%- endcache -%}"
+    ]
+  },
+  "Command entity loop": {
+    "prefix": "entity",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- ${1:entityname} where:'${2:conditions}' limit:'${3:10}' iterator:'${4:Items}' -%}",
+      "\t{%- for ${5:item} in $4 -%}",
+      "\t\t$6",
+      "\t{%- endfor -%}",
+      "{%- end${1:/downcase} -%}"
+    ]
+  },
+  "Command single entity": {
+    "prefix": "entityid",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- ${1:entityname} id:'${2:100}' -%}",
+      "\t{{ ${1:/downcase}.${3} }}",
+      "{%- end${1:/downcase} -%}"
+    ]
+  },
+  "Command entity count": {
+    "prefix": "entitycount",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- ${1:entityname} where:'${2:conditions}' count:'true' -%}",
+      "\t{%- assign ${1:entityname}Count = count -%}",
+      "{%- end${1:/downcase} -%}"
+    ]
+  },
+  "Command javascript": {
+    "prefix": "js",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- javascript -%}",
+      "\t$1",
+      "{%- endjavascript -%}"
+    ]
+  },
+  "Command javascript url": {
+    "prefix": "jsurl",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- javascript url:'${1:https://}' id:'${2:uniqueid}' -%}{%- endjavascript -%}"
+    ]
+  },
+  "Command search": {
+    "prefix": "search",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- search query:'${1:variable}' entities'${2:person,group}' limit:'${3:50}' ${4:offset:'${5:0}'} searchtype:'${6|exactmatch,wildcard,fuzzy|}' -%}",
+      "\t{%- for item in results -%}",
+      "\t\t",
+      "\t{%- endfor -%}",
+      "{%- endsearch -%}"
+    ]
+  },
+  "Tag sql": {
+    "prefix": "sql",
+    "description": "Theme tag: SQL",
+    "body": [
+      "{%- sql return:'${1:listvariable}' -%}", 
+      "\t$3", 
+      "{%- endsql -%}",
+      "{% for item in ${1} %}",
+      "\t$4", 
+      "{% endfor %}"
+    ]
+  },
+  "Command stylesheet": {
+    "prefix": "style",
+    "description": "Control flow tag: case",
+    "body": [
+      "{%- stylesheet id:'${1:uniqueid}' -%}",
+      "\t$2",
+      "{%- endstylesheet -%}"
+    ]
+  },
+  "Tag Option compile": {
+    "prefix": "compile",
+    "description": "Tag stylesheet option",
+    "body": ["compile:'${1:less}'"]
+  },
+  "Tag Option import": {
+    "prefix": "import",
+    "description": "Tag stylesheet option",
+    "body": ["import:'${1:_variables.less}'"]
+  },
+  "Tag Option cacheduration": {
+    "prefix": "cacheduration",
+    "description": "Tag stylesheet option",
+    "body": ["cacheduration:'${1:3600}'"]
+  },
+  "Tag webrequest": {
+    "prefix": "webrequest",
+    "description": "Command tag: webrequest",
+    "body": [
+      "{%- webrequest url:'${1:https://api.github.com/repos/SparkDevNetwork/Rock/commits}' -%}",
+      "\t{%- for item in results -%}",
+      "\t\t$3",
+      "\t{%- endfor -%}",
+      "{%- endwebrequest -%}"
+    ]
+  },
+  "Tag workflowactivate": {
+    "prefix": "workflowactivate",
+    "description": "Command tag: Workflow Activate",
+    "body": [
+      "{% workflowactivate workflowtype:'${1:workflowId}' %}",
+      "\tActivated new workflow with the id of #{{ Workflow.Id }}.$2",
+      "{% endworkflowactivate %}"
+    ]
+  }
+}
+

@@ -1,0 +1,9 @@
+{
+  "Person Report Children": {
+    "prefix": "canonical",
+    "description": "Add Canonical Link to head",
+    "body": [
+      "{{ ${0:'https://rockrms.com/'} | AddLinkTagToHead:'rel','canonical' }}"
+    ]
+  }
+}

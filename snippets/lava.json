@@ -1,4 +1,9 @@
 {
+  "Tag": {
+    "prefix": "tag",
+    "description": "Empty tag",
+    "body": ["{% $1 %}"]
+  },
   "Tag if": {
     "prefix": "if",
     "description": "Control flow tag: if",
@@ -125,60 +130,12 @@
   "Tag Option disableanonymousfunction": {
     "prefix": "disableanonymousfunction",
     "description": "Tag javascript option",
-    "body": ["disableanonymousfunction:true"]
+    "body": ["disableanonymousfunction:'true'"]
   },
   "Tag Option url": {
     "prefix": "url",
     "description": "Tag javascript option",
     "body": ["url:'${1:https://...}'"]
-  },
-  "Tag sql": {
-    "prefix": "sql",
-    "description": "Theme tag: SQL",
-    "body": ["{%- sql return:'${1:listvariable}' -%}", "\t$3", "{%- endsql -%}"]
-  },
-  "Tag stylesheet": {
-    "prefix": "stylesheet",
-    "description": "Theme tag: stylesheet",
-    "body": ["{%- stylesheet -%}", "\t$3", "{%- endstylesheet -%}"]
-  },
-  "Tag Option id": {
-    "prefix": "id",
-    "description": "Tag stylesheet option",
-    "body": ["id:'${1:0}'"]
-  },
-  "Tag Option compile": {
-    "prefix": "compile",
-    "description": "Tag stylesheet option",
-    "body": ["compile:'${1:less}'"]
-  },
-  "Tag Option import": {
-    "prefix": "import",
-    "description": "Tag stylesheet option",
-    "body": ["import:'${1:_variables.less}'"]
-  },
-  "Tag Option cacheduration": {
-    "prefix": "cacheduration",
-    "description": "Tag stylesheet option",
-    "body": ["cacheduration:'${1:3600}'"]
-  },
-  "Tag webrequest": {
-    "prefix": "webrequest",
-    "description": "Command tag: webrequest",
-    "body": [
-      "{%- webrequest url:'${1:https://api.github.com/repos/SparkDevNetwork/Rock/commits}' -%}",
-      "\t$3",
-      "{%- endwebrequest -%}"
-    ]
-  },
-  "Tag workflowactivate": {
-    "prefix": "workflowactivate",
-    "description": "Command tag: Workflow Activate",
-    "body": [
-      "{% workflowactivate workflowtype:'${1:workflowId}' %}",
-      "\tActivated new workflow with the id of #{{ Workflow.Id }}.$2",
-      "{% endworkflowactivate %}"
-    ]
   },
   "Tag raw": {
     "prefix": "raw",
@@ -275,7 +232,7 @@
   "Filter first": {
     "prefix": "first",
     "description": "Array filter: first",
-    "body": "| first"
+    "body": "| First"
   },
   "Filter index": {
     "prefix": "index",
@@ -310,7 +267,7 @@
   "Filter size": {
     "prefix": "size",
     "description": "Array filter: size",
-    "body": "| size"
+    "body": "| Size"
   },
   "Filter sort": {
     "prefix": "sort",
@@ -335,6 +292,6 @@
   "Filter reverse": {
     "prefix": "reverse",
     "description": "Array filter or Text filter: reverse",
-    "body": "| reverse"
+    "body": "| Reverse"
   }
 }

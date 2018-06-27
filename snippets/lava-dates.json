@@ -1,0 +1,37 @@
+{
+  "Filter Date": {
+    "prefix": "Date",
+    "description": "Displays the date given a format string. The string 'Now' can be used for the current date/time.",
+    "body": [
+      "| Date:'${0:dddd, MMMM d, yyyy}' "
+    ]
+  },
+  "Filter Date Time": {
+    "prefix": "Date-time",
+    "description": "",
+    "body": [
+      "| Date:'${0:h:mm tt}' | Downcase "
+    ]
+  },
+  "Filter Date Days Since": {
+    "prefix": "DaysSince",
+    "description": "",
+    "body": [
+      "| DaysSince "
+    ]
+  },
+  "Filter Date Days Until": {
+    "prefix": "DaysUntil",
+    "description": "",
+    "body": [
+      "| DaysUntil "
+    ]
+  },
+  "Filter Date Now": {
+    "prefix": "now",
+    "description": "Displays the date given a format string. The string 'Now' can be used for the current date/time.",
+    "body": [
+      "{{ 'Now' | Date: '${0:M/d/yyyy|dddd, MMMM d, yyyy}' }}"
+    ]
+  }
+}

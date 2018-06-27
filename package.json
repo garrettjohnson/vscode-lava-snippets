@@ -1,57 +1,68 @@
 {
     "name": "vscode-lava-snippets",
-    "version": "1.0.0",
-    "publisher": "garrettjohnson",
-    "displayName": "Rock RMS Lava Template Snippets",
-    "description": "Rock RMS Lava Template snippets",
-    "icon": "images/rockrms-icon.jpg",
-    "galleryBanner": {
-        "color": "#30373b",
-        "theme": "dark"
-    },
-    "engines": {
-        "vscode": "0.10.x"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "keywords": [
-        "snippets",
-        "lava",
-        "rockrms"
-    ],
+    "displayName": "Lava VSCode Snippets",
+    "description": "Snippets that will supercharge your Lava workflow",
+    "version": "0.0.1",
+    "publisher": "GarrettJohnson",
     "license": "SEE LICENSE IN LICENSE.txt",
+    "bugs": "https://github.com/garrettjohnson/vscode-lava-snippets/issues",
     "homepage": "https://github.com/garrettjohnson/vscode-lava-snippets",
     "repository": {
         "type": "git",
         "url": "https://github.com/garrettjohnson/vscode-lava-snippets.git"
     },
-    "bugs": "https://github.com/garrettjohnson/vscode-lava-snippets/issues",
+    "icon": "images/rockrms-icon.jpg",
+    "galleryBanner": {
+        "color": "#30373b",
+        "theme": "dark"
+    },
+    "preview": true,
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [ "Snippets" ],
+    "keywords": [ "rockrms", "lava", "snippets", "church" ],
     "contributes": {
         "snippets": [
             {
-                "language": "liquid",
+                "language": "lava",
                 "path": "./snippets/lava.json"
             },
             {
-                "language": "liquid",
+                "language": "lava",
+                "path": "./snippets/lava-commands.json"
+            },
+            {
+                "language": "lava",
+                "path": "./snippets/lava-dates.json"
+            },
+            {
+                "language": "lava",
                 "path": "./snippets/lava-numeric.json"
             },
             {
-                "language": "liquid",
+                "language": "lava",
                 "path": "./snippets/lava-other.json"
             },
             {
-                "language": "liquid",
+                "language": "lava",
                 "path": "./snippets/lava-person.json"
             },
             {
-                "language": "liquid",
+                "language": "lava",
                 "path": "./snippets/lava-text.json"
+            },
+            {
+                "language": "lava",
+                "path": "./snippets/extensions/lava-shortcodes.json"
+            },
+            {
+                "language": "lava",
+                "path": "./snippets/extensions/lava-cms.json"
             }
         ]
     },
     "extensionDependencies": [
-        "neilding.language-liquid"
+        "GarrettJohnson.language-lava"
     ]
 }
